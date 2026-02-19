@@ -53,20 +53,14 @@ export default function Dashboard() {
     }, [isLoaded, user]);
 
     return (
-        <div className="min-h-screen bg-[#03030d] text-white">
-            <header className="border-b border-white/5 px-6 py-4 flex items-center justify-between">
-                <h1 className="text-xl font-bold">VidMax Dashboard</h1>
-                <UserButton />
-            </header>
-            <main className="p-8 max-w-6xl mx-auto">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
-                    <h2 className="text-2xl font-bold mb-4">Welcome to your workspace!</h2>
-                    <p className="text-white/60 mb-8">Start creating your AI videos here.</p>
-                    <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 font-semibold shadow-lg shadow-violet-500/20 hover:from-violet-500 hover:to-fuchsia-500 transition-all">
-                        Create First Video
-                    </button>
-                </div>
-            </main>
+        <div className="w-full">
+            <div className="bg-white border border-slate-200 rounded-2xl p-12 text-center max-w-3xl mx-auto shadow-sm mt-8">
+                <h2 className="text-3xl font-bold mb-4 text-slate-900 tracking-tight">Welcome to your workspace!</h2>
+                <p className="text-lg text-slate-600 mb-8">Start creating your stunning AI videos here.</p>
+                <button className="px-8 py-4 rounded-xl bg-blue-600 font-semibold text-white shadow-md hover:bg-blue-700 transition-all text-lg">
+                    Create First Video
+                </button>
+            </div>
         </div>
     );
 }
