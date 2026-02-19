@@ -23,6 +23,7 @@ import {
   MessageSquare,
   Instagram,
 } from "lucide-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 // ─── TikTok icon (not in lucide) ───────────────────────────────────────────
 const TikTokIcon = ({ size = 20, className = "" }: { size?: number; className?: string }) => (
@@ -68,14 +69,26 @@ function Navbar() {
       </nav>
 
       {/* CTA */}
+      {/* CTA */}
       <div className="hidden md:flex items-center gap-3">
-        <a href="#" className="text-sm text-white/70 hover:text-white transition-colors">Sign in</a>
-        <a
-          href="#"
-          className="text-sm px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-medium transition-all duration-200 shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40 hover:-translate-y-0.5"
-        >
-          Start Free Trial
-        </a>
+        <SignedOut>
+          <a href="/sign-in" className="text-sm text-white/70 hover:text-white transition-colors">Sign in</a>
+          <a
+            href="/sign-up"
+            className="text-sm px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-medium transition-all duration-200 shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40 hover:-translate-y-0.5"
+          >
+            Start Free Trial
+          </a>
+        </SignedOut>
+        <SignedIn>
+          <a
+            href="/dashboard"
+            className="text-sm px-4 py-2 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-medium transition-all duration-200 shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40 hover:-translate-y-0.5"
+          >
+            Dashboard
+          </a>
+          <UserButton />
+        </SignedIn>
       </div>
 
       {/* Mobile toggle */}
@@ -101,7 +114,7 @@ function Navbar() {
             </a>
           ))}
           <a
-            href="#"
+            href="/sign-up"
             className="px-4 py-2.5 rounded-lg bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white font-medium text-center"
           >
             Start Free Trial
@@ -157,14 +170,25 @@ function Hero() {
 
       {/* CTAs */}
       <div className="flex flex-col sm:flex-row gap-4 mb-14">
-        <a
-          href="#"
-          id="hero-start-free"
-          className="group flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-semibold text-base transition-all duration-200 shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-1"
-        >
-          Start for Free
-          <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-        </a>
+        <SignedOut>
+          <a
+            href="/sign-up"
+            id="hero-start-free"
+            className="group flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-semibold text-base transition-all duration-200 shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-1"
+          >
+            Start for Free
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+        </SignedOut>
+        <SignedIn>
+          <a
+            href="/dashboard"
+            className="group flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-semibold text-base transition-all duration-200 shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-1"
+          >
+            Go to Dashboard
+            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+        </SignedIn>
         <a
           href="#how-it-works"
           id="hero-watch-demo"
@@ -703,7 +727,7 @@ function CTABanner() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#"
+            href="/sign-up"
             id="cta-start-free"
             className="group flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-500 hover:to-fuchsia-500 text-white font-semibold text-base transition-all duration-200 shadow-2xl shadow-violet-500/30 hover:shadow-violet-500/50 hover:-translate-y-1"
           >
