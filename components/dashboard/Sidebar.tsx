@@ -35,7 +35,7 @@ export function Sidebar() {
         <div className="w-72 h-screen bg-white border-r border-slate-200 flex flex-col p-6 shadow-sm flex-shrink-0">
             {/* Header */}
             <div className="flex items-center gap-3 mb-8">
-                <Image src="/logo.png" alt="VidMax Logo" width={40} height={40} className="rounded-lg object-contain" />
+                <Image src="/logo.avif" alt="VidMax Logo" width={40} height={40} className="rounded-lg object-contain" />
                 <h1 className="text-2xl font-bold text-slate-900 tracking-tight">VidMax</h1>
             </div>
 
@@ -49,6 +49,7 @@ export function Sidebar() {
             <div className="flex-1 space-y-2">
                 {menuOptions.map((option) => {
                     const isActive = pathname === option.href || (pathname.startsWith(option.href) && option.href !== "/dashboard");
+                    const Icon = option.icon;
                     return (
                         <Link
                             key={option.name}
@@ -60,7 +61,7 @@ export function Sidebar() {
                                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                             )}
                         >
-                            <option.icon className={cn("w-6 h-6", isActive ? "text-blue-600" : "text-slate-500")} />
+                            <Icon className={cn("w-6 h-6", isActive ? "text-blue-600" : "text-slate-500")} />
                             {option.name}
                         </Link>
                     );
@@ -71,6 +72,7 @@ export function Sidebar() {
             <div className="mt-auto pt-6 border-t border-slate-200 space-y-2">
                 {footerOptions.map((option) => {
                     const isActive = pathname === option.href;
+                    const Icon = option.icon;
                     return (
                         <Link
                             key={option.name}
@@ -82,7 +84,7 @@ export function Sidebar() {
                                     : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
                             )}
                         >
-                            <option.icon className={cn("w-6 h-6", isActive ? "text-blue-600" : "text-slate-500")} />
+                            <Icon className={cn("w-6 h-6", isActive ? "text-blue-600" : "text-slate-500")} />
                             {option.name}
                         </Link>
                     );

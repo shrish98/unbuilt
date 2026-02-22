@@ -1,0 +1,20 @@
+
+C:\Users\hp\OneDrive\Desktop\short video\vidmax\app\api\webhooks\clerk\route.ts
+  52:61  warning  'image_url' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hp\OneDrive\Desktop\short video\vidmax\app\dashboard\page.tsx
+  3:10  warning  'UserButton' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\hp\OneDrive\Desktop\short video\vidmax\app\page.tsx
+   75:11  error  Do not use an `<a>` element to navigate to `/sign-in/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+   76:11  error  Do not use an `<a>` element to navigate to `/sign-up/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+  116:11  error  Do not use an `<a>` element to navigate to `/sign-up/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+  174:11  error  Do not use an `<a>` element to navigate to `/sign-up/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+  385:53  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                react/no-unescaped-entities
+  468:74  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                react/no-unescaped-entities
+  691:73  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                react/no-unescaped-entities
+  691:80  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                react/no-unescaped-entities
+  729:11  error  Do not use an `<a>` element to navigate to `/sign-up/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+✖ 11 problems (9 errors, 2 warnings)
+
